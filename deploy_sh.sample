@@ -1,0 +1,19 @@
+#!/bin/bash
+export MONGO_URI=''
+export MONGO_DEBUG=''
+# export MONGO_SSL_CA=''
+# export MONGO_SSL_CERT=''
+# export MONGO_SSL_KEY=''
+
+export JWT_SECERET=''
+export TOKEN_VALIDITY=''
+
+export ENCRYPT_ALGO=''
+export ENCRYPT_KEY=''
+
+export NODE_ENV=''
+export PORT=
+export ALLOW_CORS_ORIGIN=''
+export ALLOW_CORS_METHODS=''
+
+npm run dev

@@ -1,0 +1,50 @@
+{
+  "name": "node-express-mongo-boiler-plate",
+  "version": "0.1.0",
+  "description": "node express api with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=app:request node index.js",
+    "debug": "DEBUG=app:* node index.js",
+    "build": "rimraf build && npm run lint && babel ./src --out-dir build/src",
+    "dev": "DEBUG=app:* nodemon --exec babel-node index.js",
+    "dev-inspect": "DEBUG=app:* babel-node --inspect index.js",
+    "lint": "eslint 'index.js' 'src/**/*.js' 'src/index.js' ",
+    "precommit": "npm run lint",
+    "prepush": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deeputkarsh/node-express-mongo-boiler-plate"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "boilerplate"
+  ],
+  "author": "Utkarsh Deep",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
+    "nodemon": "^1.19.4",
+    "rimraf": "^3.0.0"
+  }
+}
